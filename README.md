@@ -1,0 +1,2 @@
+# sAlphaEx
+Get English alphabet (Forced inclusion)     $sAlphaEx = ""     For $i = 65 To 122         $sAlphaEx &amp;= Chr($i)         If $i = 90 Then $i += 6     Next      ; All valid alpha characters are needed to continue     If BitAND($dFlag, 16) = 16 Then ; Conditional inclusion of extended latin alphabet         $sAlphaEx &amp;= Chr(138) &amp; Chr(140) &amp; Chr(142) &amp; Chr(154) &amp; Chr(156) &amp; Chr(158) &amp; Chr(159)         For $i = 196 To 255             If $i &lt;> 215 And $i &lt;> 247 Then $sAlphaEx &amp;= Chr($i)         Next
